@@ -2,6 +2,7 @@
   (:use compojure.core)
   (:require [compojure.route :as route])
   (:require [compojure.handler :as handler])
+  (:require [graph.db :as db])
   (:use org.httpkit.server))
 
 (defn ok [req]
@@ -14,5 +15,6 @@
 
 (defn -main
   [& args]
+  (db/connect)
   (run-server (handler/site #'all-routes) {:port 8080}))
 
