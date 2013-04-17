@@ -5,5 +5,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [http-kit "2.0.1"]
-                 [compojure "1.1.5"]]
+                 [compojure "1.1.5"]
+                 [clojurewerkz/neocons "1.0.3"]]
   :main graph.server)
