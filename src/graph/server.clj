@@ -4,13 +4,13 @@
   (:require [compojure.handler :as handler])
   (:use org.httpkit.server))
 
-(defn root [req]
+(defn ok [req]
   {:status  200
    :headers {"Content-Type" "text/plain"}
    :body    "OK"})
 
 (defroutes all-routes
-  (GET "/" [] root))
+  (GET "/" [] ok))
 
 (defn -main
   [& args]
